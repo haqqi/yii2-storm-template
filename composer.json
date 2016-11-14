@@ -1,0 +1,56 @@
+{
+  "name": "haqqi/yii2-storm-template",
+  "description": "Storm Admin Template for Yii2",
+  "license": "Apache License",
+  "authors": [
+    {
+      "name": "MF Haqqi",
+      "email": "me@haqqi.net",
+      "homepage": "http://haqqi.net",
+      "role": "Developer"
+    }
+  ],
+  "keywords": ["yii2", "template"],
+  "type": "yii2-extension",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "replace": {
+    "bower-asset/jquery": "*",
+    "bower-asset/jquery.inputmask": "*",
+    "bower-asset/punycode": "*",
+    "bower-asset/yii2-pjax": "*",
+    "bower-asset/bootstrap": "*",
+    "bower-asset/html5shiv": "*",
+    "bower-asset/respond": "*",
+    "bower-asset/simple-line-icons": "*"
+  },
+  "require": {
+    "php": ">=5.6.0",
+    "yiisoft/yii2": ">=2.0.0",
+    "yiisoft/yii2-bootstrap": "2.0.*",
+    "mimicreative/yii2-html5shiv": "*",
+    "mimicreative/yii2-respond": "*",
+    "mimicreative/yii2-simple-line-icons": "*",
+    "mimicreative/yii2-metismenu": "*",
+    "mimicreative/yii2-scrollator": "*",
+    "rmrevin/yii2-fontawesome": "~2.17",
+    "mervick/yii2-material-design-icons": "^1.0"
+  },
+  "require-dev": {
+    "firephp/firephp-core": "dev-master"
+  },
+  "extra": {
+    "asset-installer-paths": {
+      "npm-asset-library": "vendor/npm",
+      "bower-asset-library": "vendor/bower"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "haqqi\\storm\\": "src/"
+    }
+  },
+  "scripts": {
+    "post-update-cmd": "bower update"
+  }
+}
