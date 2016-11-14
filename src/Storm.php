@@ -3,6 +3,7 @@
 namespace haqqi\storm;
 
 
+use haqqi\storm\assets\StormAsset;
 use yii\base\Component;
 use yii\base\InvalidConfigException;
 use yii\web\AssetBundle;
@@ -138,12 +139,12 @@ class Storm extends Component  {
 
   /**
    * @param $view \yii\web\View
-   * @return NecrophosAsset;
+   * @return StormAsset;
    */
   public static function registerThemeAsset($view) {
     if(self::$assetBundle == null) {
       // @todo: register asset bundle
-//      self::$assetBundle = NecrophosAsset::register($view);
+      self::$assetBundle = StormAsset::register($view);
     }
   }
 }
