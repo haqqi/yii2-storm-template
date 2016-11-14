@@ -82,7 +82,7 @@ class Storm extends Component  {
     $this->style = self::STYLE_DEFAULT;
 
     // @todo: Use default config
-    $this->sidebarMenuItems = [];
+    $this->sidebarMenuItems = require (__DIR__ . '/config/sidebar-menu.php');
 
     parent::__construct($config);
   }
