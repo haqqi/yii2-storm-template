@@ -234,7 +234,7 @@ class SidebarMenu extends Menu {
     $items = ArrayHelper::getValue($item, 'items', []);
 
     if (!empty($items)) {
-      return Html::tag('i', '', ['class' => 'menu-arrow fa fa-angle-right' . ($active ? ' open' : '')]);
+      return Html::tag('i', '', ['class' => 'menu-arrow mdi mdi-keyboard-arrow-right' . ($active ? ' open' : '')]);
     }
 
     return '';
