@@ -59,6 +59,8 @@ class StormAsset extends AssetBundle {
 
     // exclude metisMenu CSS. We create our own!
     \Yii::$app->assetManager->bundles['mimicreative\assets\MetisMenuAsset']['css'] = [];
+
+    $this->_setupStyle();
   }
 
   private function _setupStyle() {
