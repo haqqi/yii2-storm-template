@@ -1,0 +1,171 @@
+/**
+Storm Admin Theme by Haqqi (c) 2016
+*/
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border: 0;
+  height: 60px;
+}
+
+.navbar-header {
+  height: 100%;
+}
+
+.navbar-collapse {
+  border: 0;
+  padding: 0;
+}
+
+.navbar-toggle {
+  float: none;
+  font-size: 20px;
+  padding: 0 15px;
+  line-height: 60px;
+  border: 0;
+  margin: 0;
+  display: inline-block;
+  border-radius: 0;
+}
+
+@media (min-width: 768px) {
+  .navbar-toggle {
+    display: none;
+  }
+}
+
+#logo-area {
+  width: 60px;
+  max-height: 60px;
+  float: left;
+  height: 100%;
+  overflow: hidden;
+}
+
+#logo-area a {
+  display: inline-block;
+}
+
+#logo-area a img {
+  display: block;
+  max-width: 60px;
+  max-height: 60px;
+}
+
+#logo-area a img.logo-long {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  #logo-area {
+    width: 240px;
+    max-height: 60px;
+  }
+  #logo-area a img {
+    max-width: 240px;
+  }
+  #logo-area a img.logo-small {
+    display: none;
+  }
+  #logo-area a img.logo-long {
+    display: block;
+  }
+}
+
+#sidebar-menu ul, #sidebar-menu li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+#sidebar-menu li.heading, #sidebar-menu li > a {
+  padding: 10px 20px;
+}
+
+#sidebar-menu li > a {
+  display: block;
+  color: #54667a;
+}
+
+#sidebar-menu li > a:hover, #sidebar-menu li > a:focus {
+  text-decoration: none;
+}
+
+#sidebar-menu li > a:hover {
+  color: #4a596b;
+  background-color: rgba(150, 150, 150, 0.1);
+}
+
+#sidebar-menu li.heading {
+  font-weight: 700;
+  color: #555555;
+  font-size: 13px;
+}
+
+#sidebar-menu i.fa, #sidebar-menu i.mdi, #sidebar-menu i.icons {
+  font-size: 16px;
+}
+
+.necro-scroll.scrollator_lane_holder {
+  width: 10px;
+}
+
+.necro-scroll.scrollator_lane_holder.hover, .necro-scroll.scrollator_lane_holder:hover {
+  width: 10px;
+}
+
+.necro-scroll.scrollator_lane_holder.hover .scrollator_handle_holder, .necro-scroll.scrollator_lane_holder:hover .scrollator_handle_holder {
+  width: 10px;
+}
+
+.necro-scroll .scrollator_lane {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.necro-scroll .scrollator_handle_holder {
+  width: 10px;
+}
+
+.necro-scroll .scrollator_handle {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+* {
+  outline: none !important;
+}
+
+#main-sidebar {
+  max-height: 300px;
+  overflow-y: auto;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  z-index: 500;
+  background-color: white;
+  box-shadow: 0px 1px 4px 0px rgba(50, 50, 50, 0.1);
+}
+
+@media (min-width: 768px) {
+  #main-sidebar {
+    width: 240px;
+    position: absolute;
+    top: 60px;
+    z-index: 500;
+    max-height: calc(100% - 60px);
+  }
+}
+
+@media (min-width: 768px) {
+  #page-wrapper {
+    margin-left: 240px;
+  }
+}

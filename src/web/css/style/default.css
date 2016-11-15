@@ -1,0 +1,22 @@
+/**
+Storm: Default theme style definition of necrophos
+*/
+#wrapper {
+  background-color: #edf1f5;
+}
+
+.navbar {
+  background-color: #33561F;
+}
+
+.navbar-toggle {
+  color: #ffffff;
+}
+
+.navbar-toggle:hover, .navbar-toggle:focus {
+  color: #ffffff;
+}
+
+.navbar-toggle:hover {
+  background-color: #3a6123;
+}
