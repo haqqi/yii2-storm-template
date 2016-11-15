@@ -29,7 +29,8 @@ class StormAsset extends AssetBundle {
 
   public $css = [
     // default font
-    '//fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=all',
+    '//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i',
+    '//fonts.googleapis.com/css?family=Oswald:300,400,700',
 
     // main css file
     'css/storm-main.css'
