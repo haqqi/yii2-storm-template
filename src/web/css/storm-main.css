@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
 Storm Admin Theme by Haqqi (c) 2016
 */
@@ -78,58 +79,128 @@ body {
   list-style-type: none;
 }
 
-#sidebar-menu li.heading, #sidebar-menu li > a {
-  padding: 10px 20px;
+#sidebar-menu .sidebar-nav li.heading {
+  padding: 10px 20px 4px 20px;
+  margin-top: 20px;
+  font-weight: 400;
+  color: #989898;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Oswald', 'Open Sans', sans-serif;
 }
 
-#sidebar-menu li > a {
+#sidebar-menu .sidebar-nav li i.fa, #sidebar-menu .sidebar-nav li i.mdi, #sidebar-menu .sidebar-nav li i.icon- {
+  font-size: 18px;
+  display: inline-block;
+}
+
+#sidebar-menu .sidebar-nav li i.fa {
+  vertical-align: -5%;
+}
+
+#sidebar-menu .sidebar-nav li i.mdi {
+  vertical-align: -13%;
+  margin-right: 5px;
+}
+
+#sidebar-menu .sidebar-nav li > a {
+  padding: 8px 35px 8px 20px;
   display: block;
   color: #54667a;
+  position: relative;
+  font-size: 14px;
 }
 
-#sidebar-menu li > a:hover, #sidebar-menu li > a:focus {
+#sidebar-menu .sidebar-nav li > a .label {
+  float: right;
+  line-height: 15px;
+}
+
+#sidebar-menu .sidebar-nav li > a .menu-arrow {
+  position: absolute;
+  right: 12px;
+  top: 11px;
+  font-size: 18px;
+}
+
+#sidebar-menu .sidebar-nav li > a:hover, #sidebar-menu .sidebar-nav li > a:focus {
   text-decoration: none;
 }
 
-#sidebar-menu li > a:hover {
+#sidebar-menu .sidebar-nav li > a:hover {
   color: #4a596b;
   background-color: rgba(150, 150, 150, 0.1);
 }
 
-#sidebar-menu li.heading {
-  font-weight: 700;
-  color: #555555;
-  font-size: 13px;
+#sidebar-menu .sidebar-nav li.active > a {
+  background-color: rgba(150, 150, 150, 0.1);
 }
 
-#sidebar-menu i.fa, #sidebar-menu i.mdi, #sidebar-menu i.icons {
-  font-size: 16px;
+#sidebar-menu .sidebar-nav li.active > a > .menu-arrow:before {
+  content: "";
 }
 
-.necro-scroll.scrollator_lane_holder {
-  width: 10px;
+#sidebar-menu .sidebar-nav > li.active > a {
+  background-color: rgba(150, 150, 150, 0.2);
 }
 
-.necro-scroll.scrollator_lane_holder.hover, .necro-scroll.scrollator_lane_holder:hover {
-  width: 10px;
+#sidebar-menu .sidebar-nav > li > a {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-top: 1px solid #f0f0f0;
 }
 
-.necro-scroll.scrollator_lane_holder.hover .scrollator_handle_holder, .necro-scroll.scrollator_lane_holder:hover .scrollator_handle_holder {
-  width: 10px;
+#sidebar-menu .sidebar-nav > li > a .menu-arrow {
+  top: 15px;
 }
 
-.necro-scroll .scrollator_lane {
+#sidebar-menu .sidebar-nav > li.heading + li > a {
+  border-top-color: transparent;
+}
+
+#sidebar-menu .sidebar-nav ul.sub-menu {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+#sidebar-menu .sidebar-nav ul.sub-menu.level-2 > li > a {
+  padding-left: 47px;
+}
+
+#sidebar-menu .sidebar-nav ul.sub-menu.level-3 > li > a {
+  padding-left: 57px;
+}
+
+#sidebar-menu .sidebar-nav ul.sub-menu.level-4 > li > a, #sidebar-menu .sidebar-nav ul.sub-menu.level-5 > li > a, #sidebar-menu .sidebar-nav ul.sub-menu.level-6 > li > a {
+  padding-left: 67px;
+}
+
+.sidebar-scroll.scrollator_lane_holder {
+  width: 0px;
+}
+
+.sidebar-scroll.scrollator_lane_holder.hover, .sidebar-scroll.scrollator_lane_holder:hover {
+  width: 0px;
+}
+
+.sidebar-scroll.scrollator_lane_holder.hover .scrollator_handle_holder, .sidebar-scroll.scrollator_lane_holder:hover .scrollator_handle_holder {
+  width: 0px;
+}
+
+.sidebar-scroll .scrollator_lane {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-.necro-scroll .scrollator_handle_holder {
-  width: 10px;
+.sidebar-scroll .scrollator_handle_holder {
+  width: 0px;
 }
 
-.necro-scroll .scrollator_handle {
+.sidebar-scroll .scrollator_handle {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 5px;

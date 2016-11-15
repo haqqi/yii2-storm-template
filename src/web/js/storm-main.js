@@ -38,7 +38,7 @@ $(document).ready(function () {
   });
 
   $("#main-sidebar").scrollator({
-    customClass: 'necro-scroll'
+    customClass: 'sidebar-scroll'
   });
 
   function getScreenOrWindowWidth() {

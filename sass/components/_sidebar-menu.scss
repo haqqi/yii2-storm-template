@@ -1,37 +1,133 @@
 
+
+$secondLevelPadding: 47px;
+
 #sidebar-menu {
 
+	// general style of the list
 	ul, li {
 		padding: 0;
 		margin: 0;
 		list-style-type: none;
 	}
 
-	li.heading, li > a {
-		padding: 10px 20px;
-	}
+	.sidebar-nav {
 
-	li > a {
-		display: block;
-		color: #54667a;
+		// style list per menu in general
+		li {
+			&.heading {
+				padding: 10px 20px 4px 20px;
+				margin-top: 20px;
+				font-weight: 400;
+				color: #989898;
+				font-size: 12px;
+				line-height: 20px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-family: 'Oswald', 'Open Sans', sans-serif;
+			}
 
-		&:hover, &:focus {
-			text-decoration: none;
+			// icon size
+			i.fa, i.mdi, i.icon- {
+				font-size: 18px;
+				display: inline-block;
+			}
+			i.fa {
+				vertical-align: -5%;
+			}
+			i.mdi {
+				vertical-align: -13%;
+				margin-right: 5px;
+			}
+
+			> a {
+				// with right arrow
+				padding: 8px 35px 8px 20px;
+				display: block;
+				color: #54667a;
+				position: relative;
+				font-size: 14px;
+
+				.label {
+					float: right;
+					line-height: 15px;
+				}
+
+				// arrow pull right
+				.menu-arrow {
+					position: absolute;
+					right: 12px;
+					top: 11px;
+					font-size: 18px;
+				}
+
+				&:hover, &:focus {
+					text-decoration: none;
+				}
+				&:hover {
+					color: darken(#54667a, 5%);
+					background-color: rgba(150, 150, 150, 0.1);
+				}
+			}
+
+			&.active {
+				> a {
+					background-color: rgba(150, 150, 150, 0.1);
+					> .menu-arrow:before {
+						content: ""
+					}
+				}
+			}
 		}
-		&:hover {
-			color: darken(#54667a, 5%);
-			background-color: rgba(150, 150, 150, 0.1);
+
+		> li {
+			// first item of the nav, make it taller
+
+			&.active {
+				> a {
+					background-color: rgba(150, 150, 150, 0.2);
+				}
+			}
+
+			> a {
+				padding-top: 14px;
+				padding-bottom: 14px;
+				border-top: 1px solid #f0f0f0;
+
+				.menu-arrow {
+					top: 15px;
+				}
+			}
+
+			&.heading + li > a {
+				border-top-color: transparent;
+			}
+		}
+
+		// submenu definition
+		ul.sub-menu {
+			margin-top: 6px;
+			margin-bottom: 6px;
+
+			&.level-2 {
+				> li > a {
+					padding-left: $secondLevelPadding;
+				}
+			}
+			&.level-3 {
+				> li > a {
+					padding-left: $secondLevelPadding + 10px;
+				}
+			}
+			&.level-4, &.level-5, &.level-6 {
+				> li > a {
+					padding-left: $secondLevelPadding + 20px;
+				}
+			}
 		}
 	}
 
-	li.heading {
-		font-weight: 700;
-		color: #555555;
-		font-size: 13px;
-	}
 
-	// icon size
-	i.fa, i.mdi, i.icons {
-		font-size: 16px;
-	}
 }
+
+
