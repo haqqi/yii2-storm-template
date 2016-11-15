@@ -1,0 +1,16 @@
+{
+  "name": "yii2-necrophos",
+  "version": "1.0.0",
+  "scripts": {
+    "dev:activate": "gulp",
+    "dev": "run-p dev:activate"
+  },
+  "devDependencies": {
+    "gulp": "3.*",
+    "gulp-autoprefixer": "3.*",
+    "gulp-debug": "2.*",
+    "gulp-prettyerror": "1.*",
+    "gulp-sass": "2.*",
+    "npm-run-all": "2.*"
+  }
+}
