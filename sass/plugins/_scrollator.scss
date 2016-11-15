@@ -1,13 +1,13 @@
 // scrollator definition
-.necro-scroll {
+.sidebar-scroll {
   &.scrollator_lane_holder {
-    width: 10px;
+    width: 0px;
 
     &.hover, &:hover {
-      width: 10px;
+      width: 0px;
 
       .scrollator_handle_holder {
-        width: 10px;
+        width: 0px;
       }
     }
   }
@@ -18,7 +18,7 @@
   }
 
   .scrollator_handle_holder {
-    width: 10px;
+    width: 0px;
   }
 
   .scrollator_handle {
