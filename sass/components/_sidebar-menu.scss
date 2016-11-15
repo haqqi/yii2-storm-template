@@ -1,0 +1,37 @@
+
+#sidebar-menu {
+
+	ul, li {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+
+	li.heading, li > a {
+		padding: 10px 20px;
+	}
+
+	li > a {
+		display: block;
+		color: #54667a;
+
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+		&:hover {
+			color: darken(#54667a, 5%);
+			background-color: rgba(150, 150, 150, 0.1);
+		}
+	}
+
+	li.heading {
+		font-weight: 700;
+		color: #555555;
+		font-size: 13px;
+	}
+
+	// icon size
+	i.fa, i.mdi, i.icons {
+		font-size: 16px;
+	}
+}

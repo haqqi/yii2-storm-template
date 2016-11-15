@@ -1,0 +1,22 @@
+
+/**
+Necro: Default theme style definition of necrophos
+*/
+
+@import "../mixins/style-generator";
+
+// variables area
+$wrapper-bg: #edf1f5;
+
+$navbar-bg: #33561F;
+
+$navbar-toggle-color: #ffffff;
+
+
+
+// end of variables area
+////////////////////////
+
+// use mixin
+
+@include style-generator();

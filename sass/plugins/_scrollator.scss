@@ -1,0 +1,28 @@
+// scrollator definition
+.necro-scroll {
+  &.scrollator_lane_holder {
+    width: 10px;
+
+    &.hover, &:hover {
+      width: 10px;
+
+      .scrollator_handle_holder {
+        width: 10px;
+      }
+    }
+  }
+
+  .scrollator_lane {
+    @include border-top-radius(5px);
+    @include border-bottom-radius(5px);
+  }
+
+  .scrollator_handle_holder {
+    width: 10px;
+  }
+
+  .scrollator_handle {
+    @include border-top-radius(5px);
+    @include border-bottom-radius(5px);
+  }
+}

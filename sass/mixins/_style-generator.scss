@@ -1,0 +1,23 @@
+
+
+@mixin style-generator {
+	#wrapper {
+		background-color: $wrapper-bg;
+	}
+
+	.navbar {
+		background-color: $navbar-bg;
+	}
+
+	.navbar-toggle {
+		color: $navbar-toggle-color;
+
+		&:hover, &:focus {
+			color: $navbar-toggle-color;
+		}
+
+		&:hover {
+			background-color: lighten($navbar-bg, 3%);
+		}
+	}
+}

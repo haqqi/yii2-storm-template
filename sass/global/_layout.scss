@@ -1,0 +1,36 @@
+* {
+	outline: none !important;
+}
+
+#main-sidebar {
+	max-height: 300px;
+	overflow-y: auto;
+	position: absolute;
+	top: $navbar-height;
+	width: 100%;
+	z-index: 500;
+	background-color: white;
+	@include box-shadow(0px 1px 4px 0px rgba(50, 50, 50, 0.1));
+
+
+	@media (min-width: $screen-sm-min) {
+		width: $sidebar-width-sm;
+		position: absolute;
+		top: $sidebar-top;
+		z-index: 500;
+		max-height: calc(100% - #{$sidebar-top});
+	}
+}
+
+#page-wrapper {
+
+	@media (min-width: $screen-sm-min) {
+		margin-left: $sidebar-width-sm;
+	}
+}
+
+
+
+
+
+

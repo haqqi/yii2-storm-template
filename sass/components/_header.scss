@@ -1,0 +1,42 @@
+// Logo area
+#logo-area {
+	// mini size by default
+	width: $logo-area-width;
+	max-height: $navbar-height;
+	float: left;
+	height: 100%;
+	overflow: hidden;
+
+	a {
+		display: inline-block;
+
+		img {
+			display: block;
+			max-width: $logo-area-width;
+			max-height: $navbar-height;
+
+			&.logo-long {
+				display: none;
+			}
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		width: $logo-area-width-md;
+		max-height: $navbar-height;
+
+		a {
+			img {
+				max-width: $logo-area-width-md;
+
+				&.logo-small {
+					display: none;
+				}
+				&.logo-long {
+					display: block;
+				}
+			}
+		}
+	}
+}
+

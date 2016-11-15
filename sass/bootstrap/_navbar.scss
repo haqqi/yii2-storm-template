@@ -1,0 +1,30 @@
+
+.navbar {
+	margin-bottom: 0;
+	border: 0;
+	height: $navbar-height;
+}
+
+.navbar-header {
+	height: 100%;
+}
+
+.navbar-collapse {
+	border: 0;
+	padding: 0;
+}
+
+.navbar-toggle {
+	float: none;
+	font-size: 20px;
+	padding: 0 15px;
+	line-height: $navbar-height;
+	border: 0;
+	margin: $navbar-margin-bottom;
+	display: inline-block;
+	border-radius: 0;
+
+	@media (min-width: $screen-sm-min) {
+		display: none;
+	}
+}

@@ -1,0 +1,23 @@
+/**
+Necrophos Admin Theme by Haqqi (c) 2016
+*/
+
+// import bootstrap variables
+@import "../sass-bootstrap/bootstrap/variables";
+// override it if necessary
+@import "global/variables";
+
+@import "../sass-bootstrap/bootstrap/mixins";
+
+// bootstrap template overridden style
+@import "global/bootstrap-override";
+
+@import "components/header";
+@import "components/sidebar-menu";
+
+@import "plugins/scrollator";
+
+// handletype
+@import "global/type";
+@import "global/layout";
+
