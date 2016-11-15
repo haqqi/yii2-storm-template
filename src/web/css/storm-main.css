@@ -47,12 +47,12 @@ body {
 
 #logo-area a {
   display: inline-block;
+  padding: 6px;
 }
 
 #logo-area a img {
   display: block;
-  max-width: 60px;
-  max-height: 60px;
+  max-width: 100%;
 }
 
 #logo-area a img.logo-long {
@@ -63,9 +63,6 @@ body {
   #logo-area {
     width: 240px;
     max-height: 60px;
-  }
-  #logo-area a img {
-    max-width: 240px;
   }
   #logo-area a img.logo-small {
     display: none;

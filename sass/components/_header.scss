@@ -9,11 +9,11 @@
 
 	a {
 		display: inline-block;
+		padding: 6px;
 
 		img {
 			display: block;
-			max-width: $logo-area-width;
-			max-height: $navbar-height;
+			max-width: 100%;
 
 			&.logo-long {
 				display: none;
@@ -27,7 +27,6 @@
 
 		a {
 			img {
-				max-width: $logo-area-width-md;
 
 				&.logo-small {
 					display: none;
