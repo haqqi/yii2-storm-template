@@ -160,8 +160,11 @@ body {
   border-top-color: transparent;
 }
 
-#sidebar-menu .sidebar-nav ul.sub-menu {
+#sidebar-menu .sidebar-nav ul.sub-menu > li.first {
   margin-top: 6px;
+}
+
+#sidebar-menu .sidebar-nav ul.sub-menu > li.last {
   margin-bottom: 6px;
 }
 

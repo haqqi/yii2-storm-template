@@ -106,8 +106,12 @@ $secondLevelPadding: 47px;
 
 		// submenu definition
 		ul.sub-menu {
-			margin-top: 6px;
-			margin-bottom: 6px;
+			> li.first {
+				margin-top: 6px;
+			}
+			> li.last {
+				margin-bottom: 6px;
+			}
 
 			&.level-2 {
 				> li > a {

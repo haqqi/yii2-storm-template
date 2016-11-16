@@ -57,12 +57,7 @@ return [
         'icon' => '',
         'label' => 'Menu Level 2',
         'url' => '#',
-      ],
-      [
-        'icon' => '',
-        'label' => 'Menu Level 2 Again',
-        'url' => '#',
-      ],
+      ]
     ]
   ],
   [

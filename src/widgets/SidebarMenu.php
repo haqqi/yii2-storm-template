@@ -30,7 +30,7 @@ class SidebarMenu extends Menu {
    * @var string the template used to render a list of sub-menus.
    * In this template, the token `{items}` will be replaced with the renderer sub-menu items.
    */
-  public $submenuTemplate = "\n<ul class='sub-menu {level}' {aria-expanded}>\n{items}\n</ul>\n";
+  public $submenuTemplate = "\n<ul class='sub-menu clearfix {level}' {aria-expanded}>\n{items}\n</ul>\n";
 
   /**
    * @var string the template used to render the body of a menu which is a link.
