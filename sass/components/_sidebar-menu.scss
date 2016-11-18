@@ -35,9 +35,10 @@ $secondLevelPadding: 47px;
 			}
 			i.fa {
 				vertical-align: -5%;
+				text-align: left;
 			}
 			i.mdi {
-				vertical-align: -13%;
+				vertical-align: -16%;
 				margin-right: 5px;
 			}
 
@@ -48,10 +49,13 @@ $secondLevelPadding: 47px;
 				color: #54667a;
 				position: relative;
 				font-size: 14px;
+				line-height: 20px;
 
 				.label {
 					float: right;
 					line-height: 15px;
+					@include border-top-radius(10px);
+					@include border-bottom-radius(10px);
 				}
 
 				// arrow pull right

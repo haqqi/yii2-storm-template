@@ -99,10 +99,11 @@ body {
 
 #sidebar-menu .sidebar-nav li i.fa {
   vertical-align: -5%;
+  text-align: left;
 }
 
 #sidebar-menu .sidebar-nav li i.mdi {
-  vertical-align: -13%;
+  vertical-align: -16%;
   margin-right: 5px;
 }
 
@@ -112,11 +113,16 @@ body {
   color: #54667a;
   position: relative;
   font-size: 14px;
+  line-height: 20px;
 }
 
 #sidebar-menu .sidebar-nav li > a .label {
   float: right;
   line-height: 15px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 #sidebar-menu .sidebar-nav li > a .menu-arrow {
