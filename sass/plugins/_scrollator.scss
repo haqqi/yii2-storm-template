@@ -26,3 +26,31 @@
     @include border-bottom-radius(5px);
   }
 }
+
+.panel-scroll {
+  &.scrollator_lane_holder {
+    width: 5px;
+
+    &.hover, &:hover {
+      width: 5px;
+
+      .scrollator_handle_holder {
+        width: 5px;
+      }
+    }
+  }
+
+  .scrollator_lane {
+    @include border-top-radius(0);
+    @include border-bottom-radius(0);
+  }
+
+  .scrollator_handle_holder {
+    width: 5px;
+  }
+
+  .scrollator_handle {
+    @include border-top-radius(0);
+    @include border-bottom-radius(0);
+  }
+}

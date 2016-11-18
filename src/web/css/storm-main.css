@@ -214,6 +214,36 @@ body {
   border-bottom-left-radius: 5px;
 }
 
+.panel-scroll.scrollator_lane_holder {
+  width: 5px;
+}
+
+.panel-scroll.scrollator_lane_holder.hover, .panel-scroll.scrollator_lane_holder:hover {
+  width: 5px;
+}
+
+.panel-scroll.scrollator_lane_holder.hover .scrollator_handle_holder, .panel-scroll.scrollator_lane_holder:hover .scrollator_handle_holder {
+  width: 5px;
+}
+
+.panel-scroll .scrollator_lane {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.panel-scroll .scrollator_handle_holder {
+  width: 5px;
+}
+
+.panel-scroll .scrollator_handle {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 * {
   outline: none !important;
 }
