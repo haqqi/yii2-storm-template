@@ -25,6 +25,7 @@ $secondLevelPadding: 47px;
 				text-transform: uppercase;
 				letter-spacing: 1px;
 				font-family: 'Oswald', 'Open Sans', sans-serif;
+				border: none;
 			}
 
 			// icon size
@@ -89,18 +90,20 @@ $secondLevelPadding: 47px;
 				}
 			}
 
+			border-top: 1px solid #f0f0f0;
+
 			> a {
 				padding-top: 14px;
 				padding-bottom: 14px;
-				border-top: 1px solid #f0f0f0;
+
 
 				.menu-arrow {
 					top: 15px;
 				}
 			}
 
-			&.heading + li > a {
-				border-top-color: transparent;
+			&.heading + li {
+				border: none;
 			}
 		}
 

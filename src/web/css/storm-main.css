@@ -89,6 +89,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: 'Oswald', 'Open Sans', sans-serif;
+  border: none;
 }
 
 #sidebar-menu .sidebar-nav li i.fa, #sidebar-menu .sidebar-nav li i.mdi, #sidebar-menu .sidebar-nav li i.icon- {
@@ -142,6 +143,10 @@ body {
   content: "";
 }
 
+#sidebar-menu .sidebar-nav > li {
+  border-top: 1px solid #f0f0f0;
+}
+
 #sidebar-menu .sidebar-nav > li.active > a {
   background-color: rgba(150, 150, 150, 0.2);
 }
@@ -149,15 +154,14 @@ body {
 #sidebar-menu .sidebar-nav > li > a {
   padding-top: 14px;
   padding-bottom: 14px;
-  border-top: 1px solid #f0f0f0;
 }
 
 #sidebar-menu .sidebar-nav > li > a .menu-arrow {
   top: 15px;
 }
 
-#sidebar-menu .sidebar-nav > li.heading + li > a {
-  border-top-color: transparent;
+#sidebar-menu .sidebar-nav > li.heading + li {
+  border: none;
 }
 
 #sidebar-menu .sidebar-nav ul.sub-menu > li.first {
