@@ -35,7 +35,6 @@ $secondLevelPadding: 47px;
 			}
 			i.fa {
 				vertical-align: -5%;
-				text-align: left;
 			}
 			i.mdi {
 				vertical-align: -16%;
@@ -53,7 +52,10 @@ $secondLevelPadding: 47px;
 
 				.label {
 					float: right;
-					line-height: 15px;
+					line-height: 14px;
+					padding: 3px 8px 3px 8px;
+					font-size: 10px;
+					font-weight: 300;
 					@include border-top-radius(10px);
 					@include border-bottom-radius(10px);
 				}

@@ -60,7 +60,7 @@ body {
   display: none;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   #logo-area {
     width: 240px;
     max-height: 60px;
@@ -99,7 +99,6 @@ body {
 
 #sidebar-menu .sidebar-nav li i.fa {
   vertical-align: -5%;
-  text-align: left;
 }
 
 #sidebar-menu .sidebar-nav li i.mdi {
@@ -118,7 +117,10 @@ body {
 
 #sidebar-menu .sidebar-nav li > a .label {
   float: right;
-  line-height: 15px;
+  line-height: 14px;
+  padding: 3px 8px 3px 8px;
+  font-size: 10px;
+  font-weight: 300;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -260,9 +262,9 @@ body {
   position: absolute;
   top: 60px;
   width: 100%;
-  z-index: 500;
+  z-index: 100;
   background-color: white;
-  box-shadow: 0px 1px 4px 0px rgba(50, 50, 50, 0.1);
+  box-shadow: 0px 1px 10px 0px rgba(50, 50, 50, 0.1);
 }
 
 @media (min-width: 768px) {
@@ -275,8 +277,40 @@ body {
   }
 }
 
+#page-wrapper {
+  position: relative;
+  padding-bottom: 40px;
+}
+
 @media (min-width: 768px) {
   #page-wrapper {
     margin-left: 240px;
   }
+}
+
+#page-content {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#main-footer {
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  color: #7993B0;
+  padding: 10px 20px;
+}
+
+#main-footer a {
+  color: #99adc3;
+}
+
+#main-footer a:hover, #main-footer a:active, #main-footer a:focus {
+  text-decoration: none;
+  color: #7993B0;
 }

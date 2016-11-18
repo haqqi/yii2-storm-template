@@ -20,4 +20,8 @@
 			background-color: lighten($navbar-bg, 3%);
 		}
 	}
+
+	#main-footer {
+		background-color: $footer-bg;
+	}
 }

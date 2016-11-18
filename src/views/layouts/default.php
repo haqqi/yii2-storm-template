@@ -39,7 +39,7 @@ $this->beginPage();
 
   <div id="wrapper">
     <!-- Top Navigation -->
-    <nav class="navbar navbar-static-top">
+    <header class="navbar navbar-static-top">
       <div class="navbar-header">
         <div id="logo-area">
           <a href="<?php echo Yii::$app->urlManager->createUrl([Storm::getComponent()->indexUri]); ?>">
@@ -53,7 +53,7 @@ $this->beginPage();
           <i class="mdi mdi-menu"></i>
         </a>
       </div>
-    </nav>
+    </header>
     <!-- End Top Navigation -->
 
     <!-- Left navbar-sidebar -->
@@ -64,7 +64,14 @@ $this->beginPage();
 
     <!-- Page Content -->
     <div id="page-wrapper">
-      <?= $content; ?>
+      <div id="page-content" class="container-fluid">
+        <?= $content; ?>
+      </div>
+      <footer id="main-footer">
+        <?php echo isset($this->params['footer'])
+          ? $this->params['footer']
+          : '&copy; 2016 - Yii2 Storm Admin Template by ' . '<a href="http://blog.haqqi.net" target="_blank">Haqqi</a>' ; ?>
+      </footer>
     </div>
     <!-- /#page-wrapper -->
   </div>
