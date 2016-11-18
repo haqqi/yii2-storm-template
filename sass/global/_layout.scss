@@ -10,7 +10,7 @@
 	width: 100%;
 	z-index: 100;
 	background-color: white;
-	@include box-shadow(0px 1px 10px 0px rgba(50, 50, 50, 0.1));
+	@include box-shadow(0px 0px 10px 0px rgba(50, 50, 50, 0.2));
 
 
 	@media (min-width: $screen-sm-min) {
@@ -32,8 +32,73 @@
 }
 
 #page-content {
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding: 15px $page-content-padding-xs 15px $page-content-padding-xs;
+
+	@media (min-width: $screen-sm-min) {
+		padding-left: $page-content-padding;
+		padding-right: $page-content-padding;
+	}
+}
+
+#page-header {
+	margin: -15px (-$page-content-padding-xs) 15px (-$page-content-padding-xs);
+	padding: 7px $page-content-padding-xs 15px $page-content-padding-xs;
+	background-color: white;
+	@include box-shadow(0px 1px 10px 0px rgba(50, 50, 50, 0.1));
+
+	.breadcrumb {
+		padding: 0 $page-content-padding-xs 5px;
+		margin: 0 (-$page-content-padding-xs);
+		list-style: none;
+		background-color: transparent;
+		border-radius: 0;
+		border-bottom: 1px solid #eeeeee;
+		font-size: 13px;
+
+		> li {
+
+			+ li:before {
+				$breadcrumb-separator: "\f105";
+				$nbsp: "\00a0";
+				content: "#{$breadcrumb-separator}#{$nbsp}"; // Unicode space added since inline-block means non-collapsing white-space
+				padding: 0 5px;
+				font-size: 12px;
+				color: #777777;
+				font-family: "FontAwesome";
+				vertical-align: 0.67px;
+			}
+		}
+
+		> .active {
+			color: $breadcrumb-active-color;
+		}
+	}
+
+	h1 {
+		margin: 15px 0 0 0 ;
+		font-size: 24px;
+		font-family: "Oswald", "Open Sans", sans-serif;
+	}
+
+	.description {
+		margin-top: 5px;
+		color: #888888;
+		font-weight: 300;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		margin-left: (-$page-content-padding);
+		margin-right: (-$page-content-padding);
+		padding-left: $page-content-padding;
+		padding-right: $page-content-padding;
+
+		.breadcrumb {
+			margin-left: (-$page-content-padding);
+			margin-right: (-$page-content-padding);
+			padding-left: $page-content-padding;
+			padding-right: $page-content-padding;
+		}
+	}
 }
 
 #main-footer {
@@ -46,7 +111,7 @@
 	font-size: 12px;
 	line-height: 20px;
 	color: #7993B0;
-	padding: 10px 20px;
+	padding: 10px $page-content-padding-xs;
 
 	a {
 		color: lighten(#7993B0, 10%);
@@ -55,6 +120,11 @@
 			text-decoration: none;
 			color: #7993B0;
 		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+		padding-left: $page-content-padding;
+		padding-right: $page-content-padding;
 	}
 }
 

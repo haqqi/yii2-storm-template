@@ -5,8 +5,11 @@
 
 use haqqi\storm\Storm;
 use haqqi\storm\widgets\SidebarMenu;
+use rmrevin\yii\fontawesome\FA;
 use yii\helpers\Html;
 use yii\helpers\Url;
+use yii\materialicons\MD;
+use yii\widgets\Breadcrumbs;
 
 Storm::registerThemeAsset($this);
 
@@ -65,6 +68,22 @@ $this->beginPage();
     <!-- Page Content -->
     <div id="page-wrapper">
       <div id="page-content" class="container-fluid">
+        <header id="page-header">
+          <?php
+          echo Breadcrumbs::widget([
+            'homeLink' => false,
+            'links' => [
+              [
+                'label' => 'Page',
+                'url' => ['page']
+              ],
+              'Edit'
+            ]
+          ]);
+          ?>
+          <h1 class="title">Edit Page</h1>
+          <div class="description">You can edit your page here.</div>
+        </header>
         <?= $content; ?>
       </div>
       <footer id="main-footer">
