@@ -45,7 +45,7 @@ return [
       ],
       [
         'label' => 'Panels',
-        'url' => ['storm/feature/panel'],
+        'url' => ['/storm/feature/panel'],
       ],
       [
         'label' => 'Buttons',
