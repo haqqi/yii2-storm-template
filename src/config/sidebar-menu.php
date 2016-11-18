@@ -44,8 +44,28 @@ return [
         'url' => ['feature/general-component'],
       ],
       [
+        'label' => 'Panels',
+        'url' => ['feature/panel'],
+      ],
+      [
         'label' => 'Buttons',
         'url' => ['feature/button'],
+      ],
+      [
+        'label' => 'Color Library',
+        'url' => ['feature/color'],
+      ],
+      [
+        'label' => 'Font Icons',
+        'url' => ['feature/font-icon'],
+      ],
+      [
+        'label' => 'Typography',
+        'url' => ['feature/typography'],
+      ],
+      [
+        'label' => 'Modals',
+        'url' => ['feature/modals'],
       ],
     ]
   ],
@@ -61,259 +81,93 @@ return [
     ]
   ],
   [
-    'icon' => '',
-    'label' => 'Heading 2'
-  ],
-  [
-    'icon' => '',
-    'label' => 'Menu Level 1',
+    'icon' => FA::icon('table')->fixedWidth(),
+    'label' => 'Tables',
     'items' => [
       [
-        'icon' => '',
-        'label' => 'Menu Level 2',
-        'url' => ['site/site'],
-        'items' => [
-          [
-            'icon' => '',
-            'label' => 'Menu Level 2',
-            'url' => '#',
-          ],
-          [
-            'icon' => '',
-            'label' => 'Menu Level 2 Again',
-            'url' => ['test/index'],
-          ],
-        ]
+        'label' => 'Bootstrap Table',
+        'url' => ['table/bootstrap'],
       ],
       [
-        'icon' => '',
-        'label' => 'Menu Level 2 Again',
-        'url' => '#',
+        'label' => 'Datatable',
+        'url' => ['table/datatable'],
       ],
     ]
   ],
   [
-    'icon' => '',
-    'label' => 'Menu Level 1',
+    'icon' => MD::icon('view-headline'),
+    'label' => 'Sample Nested Menu',
     'items' => [
       [
-        'icon' => '',
         'label' => 'Menu Level 2',
-        'url' => ['site/site'],
+        'url' => '#',
         'items' => [
           [
-            'icon' => '',
-            'label' => 'Menu Level 2',
+            'label' => 'Menu Level 3',
             'url' => '#',
           ],
           [
-            'icon' => '',
-            'label' => 'Menu Level 2 Again',
+            'label' => 'Menu Level 3 Too',
             'url' => '#',
+            'items' => [
+              [
+                'label' => 'Menu Level 4',
+                'url' => '#',
+                'items' => [
+                  [
+                    'label' => 'Menu Level 5.1',
+                    'url' => '#',
+                  ],
+                  [
+                    'label' => 'Menu Level 5.2',
+                    'url' => '#',
+                  ],
+                  [
+                    'label' => 'Menu Level 5.3',
+                    'url' => '#',
+                  ],
+                  [
+                    'label' => 'Menu Level 5.4',
+                    'url' => '#',
+                  ],
+                ]
+              ],
+            ]
           ],
         ]
       ],
       [
-        'icon' => '',
-        'label' => 'Menu Level 2 Again',
+        'label' => 'Also Level 2',
         'url' => '#',
-      ],
+      ]
     ]
   ],
   [
     'icon' => '',
-    'label' => 'Menu Level 1',
-    'items' => [
-      [
-        'icon' => '',
-        'label' => 'Menu Level 2',
-        'url' => ['site/site'],
-        'items' => [
-          [
-            'icon' => '',
-            'label' => 'Menu Level 2',
-            'url' => '#',
-          ],
-          [
-            'icon' => '',
-            'label' => 'Menu Level 2 Again',
-            'url' => '#',
-          ],
-        ]
-      ],
-      [
-        'icon' => '',
-        'label' => 'Menu Level 2 Again',
-        'url' => '#',
-      ],
-    ]
+    'label' => 'Yii2 Related Things'
+  ],
+  [
+    'icon' => MD::icon('build'),
+    'label' => 'Component Installation',
+    'url' => ['yii2/install']
+  ],
+  [
+    'icon' => MD::icon('view-quilt'),
+    'label' => 'Useful Widgets',
+    'url' => ['yii2/widgets']
   ],
   [
     'icon' => '',
-    'label' => 'Menu Level 1',
-    'items' => [
-      [
-        'icon' => '',
-        'label' => 'Menu Level 2',
-        'url' => ['site/site'],
-        'items' => [
-          [
-            'icon' => '',
-            'label' => 'Menu Level 2',
-            'url' => '#',
-          ],
-          [
-            'icon' => '',
-            'label' => 'Menu Level 2 Again',
-            'url' => '#',
-          ],
-        ]
-      ],
-      [
-        'icon' => '',
-        'label' => 'Menu Level 2 Again',
-        'url' => '#',
-      ],
-    ]
+    'label' => 'Documentations & Supports'
   ],
   [
-    'icon' => '',
-    'label' => 'Menu Level 1',
-    'items' => [
-      [
-        'icon' => '',
-        'label' => 'Menu Level 2',
-        'url' => ['site/site'],
-        'items' => [
-          [
-            'icon' => '',
-            'label' => 'Menu Level 2',
-            'url' => '#',
-          ],
-          [
-            'icon' => '',
-            'label' => 'Menu Level 2 Again',
-            'url' => '#',
-          ],
-        ]
-      ],
-      [
-        'icon' => '',
-        'label' => 'Menu Level 2 Again',
-        'url' => '#',
-      ],
-    ]
+    'icon' => MD::icon('group'),
+    'label' => 'Dev Team',
+    'url' => ['support/team']
   ],
   [
-    'icon' => '',
-    'label' => 'Menu Level 1',
-    'items' => [
-      [
-        'icon' => '',
-        'label' => 'Menu Level 2',
-        'url' => ['site/site'],
-        'items' => [
-          [
-            'icon' => '',
-            'label' => 'Menu Level 2',
-            'url' => '#',
-          ],
-          [
-            'icon' => '',
-            'label' => 'Menu Level 2 Again',
-            'url' => '#',
-          ],
-        ]
-      ],
-      [
-        'icon' => '',
-        'label' => 'Menu Level 2 Again',
-        'url' => '#',
-      ],
-    ]
-  ],
-  [
-    'icon' => '',
-    'label' => 'Menu Level 1',
-    'items' => [
-      [
-        'icon' => '',
-        'label' => 'Menu Level 2',
-        'url' => ['site/site'],
-        'items' => [
-          [
-            'icon' => '',
-            'label' => 'Menu Level 2',
-            'url' => '#',
-          ],
-          [
-            'icon' => '',
-            'label' => 'Menu Level 2 Again',
-            'url' => '#',
-          ],
-        ]
-      ],
-      [
-        'icon' => '',
-        'label' => 'Menu Level 2 Again',
-        'url' => '#',
-      ],
-    ]
-  ],
-  [
-    'icon' => '',
-    'label' => 'Menu Level 1',
-    'items' => [
-      [
-        'icon' => '',
-        'label' => 'Menu Level 2',
-        'url' => ['site/site'],
-        'items' => [
-          [
-            'icon' => '',
-            'label' => 'Menu Level 2',
-            'url' => '#',
-          ],
-          [
-            'icon' => '',
-            'label' => 'Menu Level 2 Again',
-            'url' => '#',
-          ],
-        ]
-      ],
-      [
-        'icon' => '',
-        'label' => 'Menu Level 2 Again',
-        'url' => '#',
-      ],
-    ]
-  ],
-  [
-    'icon' => '',
-    'label' => 'Menu Level 1',
-    'items' => [
-      [
-        'icon' => '',
-        'label' => 'Menu Level 2',
-        'url' => ['site/site'],
-        'items' => [
-          [
-            'icon' => '',
-            'label' => 'Menu Level 2',
-            'url' => '#',
-          ],
-          [
-            'icon' => '',
-            'label' => 'Menu Level 2 Again',
-            'url' => '#',
-          ],
-        ]
-      ],
-      [
-        'icon' => '',
-        'label' => 'Menu Level 2 Again',
-        'url' => '#',
-      ],
-    ]
+    'icon' => MD::icon('live-help'),
+    'label' => 'Helps',
+    'url' => ['support/help']
   ],
 ];
