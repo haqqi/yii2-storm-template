@@ -68,22 +68,35 @@ $this->beginPage();
     <!-- Page Content -->
     <div id="page-wrapper">
       <div id="page-content" class="container-fluid">
+        <?php
+        // setting up header
+        $pageHeader = [];
+        if(isset($this->params['pageBreadcrumb'])) $pageHeader['breadcrumb'] = $this->params['pageBreadcrumb'];
+        if(isset($this->params['pageTitle'])) $pageHeader['title'] = $this->params['pageTitle'];
+        if(isset($this->params['pageDescription'])) $pageHeader['description'] = $this->params['pageDescription'];
+
+        if(count($pageHeader) > 0) {
+        ?>
         <header id="page-header">
           <?php
-          echo Breadcrumbs::widget([
-            'homeLink' => false,
-            'links' => [
-              [
-                'label' => 'Page',
-                'url' => ['page']
-              ],
-              'Edit'
-            ]
-          ]);
+          if(isset($pageHeader['breadcrumb'])) {
+            echo Breadcrumbs::widget([
+              'homeLink' => false,
+              'links' => $pageHeader['breadcrumb']
+            ]);
+          }
+
+          if(isset($pageHeader['title'])) {
+            echo '<h1 class="title">'. $pageHeader['title'] .'</h1>';
+          }
+          if(isset($pageHeader['description'])) {
+            echo '<div class="description">'. $pageHeader['description'] .'</div>';
+          }
+
           ?>
-          <h1 class="title">Edit Page</h1>
-          <div class="description">You can edit your page here.</div>
         </header>
+        <?php } ?>
+
         <?= $content; ?>
       </div>
       <footer id="main-footer">
