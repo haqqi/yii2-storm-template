@@ -6,7 +6,7 @@ Storm: Default theme style definition of necrophos
 }
 
 .navbar {
-  background-color: #33561F;
+  background-color: #2b3643;
 }
 
 .navbar-toggle {
@@ -18,5 +18,5 @@ Storm: Default theme style definition of necrophos
 }
 
 .navbar-toggle:hover {
-  background-color: #3a6123;
+  background-color: #313e4c;
 }
