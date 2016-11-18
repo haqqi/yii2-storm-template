@@ -74,10 +74,32 @@ return [
     'label' => 'Components',
     'items' => [
       [
-        'icon' => '',
-        'label' => 'Menu Level 2',
-        'url' => '#',
+        'label' => 'Bordered Image',
+        'url' => ['component/image'],
+      ],
+      [
+        'label' => 'Maps',
+        'url' => ['component/map'],
+      ],
+      [
+        'label' => 'Charts',
+        'url' => ['component/chart'],
       ]
+    ]
+  ],
+  [
+    'icon' => FA::icon('wpforms')->fixedWidth(),
+    'label' => 'Form Stuffs',
+    'items' => [
+      [
+        'label' => 'Bootstrap Form Control',
+        'url' => ['form/bootstrap'],
+      ],
+      [
+        'label' => 'Multiple Select Control',
+        'url' => ['form/select2'],
+      ],
+
     ]
   ],
   [
