@@ -92,6 +92,10 @@
 		padding-left: $page-content-padding;
 		padding-right: $page-content-padding;
 
+		h1 {
+			font-size: 30px;
+		}
+
 		.breadcrumb {
 			margin-left: (-$page-content-padding);
 			margin-right: (-$page-content-padding);

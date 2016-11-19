@@ -37,7 +37,7 @@ return [
     'items' => [
       [
         'label' => 'Grid System',
-        'url' => ['feature/grid'],
+        'url' => ['/storm/feature/grid'],
       ],
       [
         'label' => 'General Components',

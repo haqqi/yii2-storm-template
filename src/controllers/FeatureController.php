@@ -10,7 +10,19 @@ class FeatureController extends Controller {
   }
 
   public function actionGrid() {
+    $this->view->title = 'Feature - Grid System | Yii2 Storm Admin Template';
 
+    $this->view->params['pageBreadcrumb'] = [
+      [
+        'label' => 'Features',
+        'url' => ['feature/index']
+      ],
+      'Grid System'
+    ];
+    $this->view->params['pageTitle'] = 'Grid System';
+    $this->view->params['pageDescription'] = 'Standard Bootstrap grid and special Storm grid.';
+
+    return $this->render('grid');
   }
 
   public function actionPanel() {

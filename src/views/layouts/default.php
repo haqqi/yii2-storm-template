@@ -99,11 +99,13 @@ $this->beginPage();
 
         <?= $content; ?>
       </div>
+      <!-- #main-footer -->
       <footer id="main-footer">
         <?php echo isset($this->params['footer'])
           ? $this->params['footer']
           : '&copy; 2016 - Yii2 Storm Admin Template by ' . '<a href="http://blog.haqqi.net" target="_blank">Haqqi</a>' ; ?>
       </footer>
+      <!-- /#main-footer -->
     </div>
     <!-- /#page-wrapper -->
   </div>
