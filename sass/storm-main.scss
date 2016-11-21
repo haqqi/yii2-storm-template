@@ -12,12 +12,14 @@ Storm Admin Theme by Haqqi (c) 2016
 // bootstrap template overridden style
 @import "global/bootstrap-override";
 
+// handletype
+@import "global/type";
+@import "global/layout";
+
+
 @import "components/header";
 @import "components/sidebar-menu";
 
 @import "plugins/scrollator";
 
-// handletype
-@import "global/type";
-@import "global/layout";
 

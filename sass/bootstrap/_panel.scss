@@ -1,0 +1,73 @@
+
+@mixin panel-variant($heading-title-color) {
+  border-color: $panel-border-color; // final border color
+
+  > .panel-heading {
+    color: $panel-heading-text-color;
+    background-color: transparent;
+    border-color: $panel-border-color;
+
+    > .panel-title {
+      color: $heading-title-color;
+    }
+  }
+}
+
+.panel {
+  @include border-top-radius(0);
+  @include border-bottom-radius(0);
+
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
+
+  > .panel-heading {
+    background-color: white;
+    padding: 20px 0;
+    @include border-top-radius(0);
+
+    > .panel-title {
+      font-size: 18px;
+      display: inline;
+      font-weight: 700;
+      font-family: 'Open Sans', sans-serif;
+    }
+    > .panel-description {
+      font-size: 13px;
+      font-weight: 300;
+      margin-left: 5px;
+      color: #607d8b;
+    }
+  }
+
+  > .panel-body {
+    padding: 15px 0;
+  }
+
+  > .panel-footer {
+    background-color: white;
+    padding: 15px 0;
+    @include border-bottom-radius(0);
+  }
+}
+
+// Contextual variations
+.panel-default {
+  @include panel-variant($panel-default-text);
+}
+.panel-primary {
+  @include panel-variant($panel-primary-text);
+}
+.panel-success {
+  @include panel-variant($panel-success-text);
+}
+.panel-info {
+  @include panel-variant($panel-info-text);
+}
+.panel-warning {
+  @include panel-variant($panel-warning-text);
+}
+.panel-danger {
+  @include panel-variant($panel-danger-text);
+}

@@ -1,0 +1,17 @@
+
+body {
+  color: #455a64; // blue gray material color
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', 'Open Sans', sans-serif;
+  color: #444444;
+}
+
+p {
+  margin: 0;
+
+  + p {
+    margin-top: 10px;
+  }
+}
