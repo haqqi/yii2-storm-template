@@ -5,6 +5,7 @@ namespace haqqi\storm\assets;
 use haqqi\storm\Storm;
 use yii\base\InvalidConfigException;
 use yii\web\AssetBundle;
+use yii\web\JqueryAsset;
 
 /**
  * Class StormAsset
@@ -46,17 +47,42 @@ class StormAsset extends AssetBundle {
 
   public function init() {
     parent::init();
-
     // special config for jquery file
-    \Yii::$app->assetManager->bundles['yii\web\JqueryAsset']['js']        = ['jquery.min.js'];
-    \Yii::$app->assetManager->bundles['yii\web\JqueryAsset']['jsOptions'] = ['position' => \yii\web\View::POS_HEAD];
+
+    // we need to catch if the object is already created
+    if(isset(\Yii::$app->assetManager->bundles['yii\web\JqueryAsset'])) {
+      \Yii::configure(\Yii::$app->assetManager->bundles['yii\web\JqueryAsset'], [
+        'js' => ['jquery.min.js'],
+        'jsOptions' => ['position' => \yii\web\View::POS_HEAD]
+      ]);
+    }
+    else {
+      \Yii::$app->assetManager->bundles['yii\web\JqueryAsset']['js']        = ['jquery.min.js'];
+      \Yii::$app->assetManager->bundles['yii\web\JqueryAsset']['jsOptions'] = ['position' => \yii\web\View::POS_HEAD];
+    }
 
     // minify bootstrap
-    \Yii::$app->assetManager->bundles['yii\bootstrap\BootstrapAsset']['css'] = ['css/bootstrap.min.css'];
+    if(isset(\Yii::$app->assetManager->bundles['yii\bootstrap\BootstrapAsset'])) {
+      \Yii::configure(\Yii::$app->assetManager->bundles['yii\bootstrap\BootstrapAsset'], [
+        'css' => ['css/bootstrap.min.css']
+      ]);
+    }
+    else {
+      \Yii::$app->assetManager->bundles['yii\bootstrap\BootstrapAsset']['css'] = ['css/bootstrap.min.css'];
+    }
 
-    // special config for bootstrap js
-    \Yii::$app->assetManager->bundles['yii\bootstrap\BootstrapPluginAsset']['js']        = ['js/bootstrap.min.js'];
-    \Yii::$app->assetManager->bundles['yii\bootstrap\BootstrapPluginAsset']['jsOptions'] = ['position' => \yii\web\View::POS_HEAD];
+    // minify plugins
+    if(isset(\Yii::$app->assetManager->bundles['yii\bootstrap\BootstrapPluginAsset'])) {
+      \Yii::configure(\Yii::$app->assetManager->bundles['yii\bootstrap\BootstrapPluginAsset'], [
+        'js' => ['js/bootstrap.min.js'],
+        'jsOptions' => ['position' => \yii\web\View::POS_HEAD]
+      ]);
+    }
+    else {
+      // special config for bootstrap js
+      \Yii::$app->assetManager->bundles['yii\bootstrap\BootstrapPluginAsset']['js']        = ['js/bootstrap.min.js'];
+      \Yii::$app->assetManager->bundles['yii\bootstrap\BootstrapPluginAsset']['jsOptions'] = ['position' => \yii\web\View::POS_HEAD];
+    }
 
     // exclude metisMenu CSS. We create our own!
     \Yii::$app->assetManager->bundles['mimicreative\assets\MetisMenuAsset']['css'] = [];
