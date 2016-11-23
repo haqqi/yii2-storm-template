@@ -401,12 +401,13 @@ p + p {
 }
 
 #sidebar-menu .sidebar-nav li i.fa {
-  vertical-align: -5%;
+  vertical-align: -8%;
 }
 
 #sidebar-menu .sidebar-nav li i.mdi {
   vertical-align: -16%;
-  margin-right: 5px;
+  margin-right: 3px;
+  margin-left: 2px;
 }
 
 #sidebar-menu .sidebar-nav li > a {

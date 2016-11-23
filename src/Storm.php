@@ -67,9 +67,9 @@ class Storm extends Component  {
   public $indexUri = '/';
 
   /**
-   * @var array Sidebar menu definition
+   * @var string Sidebar menu config file
    */
-  public $sidebarMenuItems;
+  public $sidebarMenuItemsPath;
 
   /**
    * Storm constructor.
@@ -83,7 +83,7 @@ class Storm extends Component  {
     $this->style = self::STYLE_DEFAULT;
 
     // @todo: Use default config
-    $this->sidebarMenuItems = require (__DIR__ . '/config/sidebar-menu.php');
+    $this->sidebarMenuItemsPath = __DIR__ . '/config/sidebar-menu.php';
 
     parent::__construct($config);
   }

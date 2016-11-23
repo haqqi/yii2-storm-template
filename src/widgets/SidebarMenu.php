@@ -46,7 +46,7 @@ class SidebarMenu extends Menu {
 
   public function __construct($config = []) {
     // use sidebar menu items config or example
-    $this->items = Storm::getComponent()->sidebarMenuItems;
+    $this->items = require (Storm::getComponent()->sidebarMenuItemsPath);
 
     parent::__construct($config);
   }
