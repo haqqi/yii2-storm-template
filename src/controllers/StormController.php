@@ -5,6 +5,7 @@ namespace haqqi\storm\controllers;
 use haqqi\storm\Storm;
 use yii\filters\ContentNegotiator;
 use yii\web\Controller;
+use yii\web\Response;
 
 /**
  * Class StormController
