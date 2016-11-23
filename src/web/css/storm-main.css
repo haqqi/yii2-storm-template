@@ -207,6 +207,10 @@ p + p {
   outline: none !important;
 }
 
+#wrapper {
+  position: relative;
+}
+
 #main-sidebar {
   max-height: 300px;
   overflow-y: auto;
@@ -223,6 +227,7 @@ p + p {
     width: 240px;
     position: absolute;
     top: 60px;
+    bottom: 0;
     z-index: 500;
     max-height: calc(100% - 60px);
   }
