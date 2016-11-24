@@ -16,7 +16,9 @@
     "bootstrap": "3.3.*",
     "html5shiv": "3.7.*",
     "respond": "*",
-    "simple-line-icons": "2.*"
+    "simple-line-icons": "2.*",
+    "bower-asset/datatables": "~1.10",
+    "bower-asset/datatables-plugins": "~1.0"
   },
   "devDependencies": {
     "typeahead.js": "*"

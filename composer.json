@@ -22,7 +22,9 @@
     "bower-asset/bootstrap": "*",
     "bower-asset/html5shiv": "*",
     "bower-asset/respond": "*",
-    "bower-asset/simple-line-icons": "*"
+    "bower-asset/simple-line-icons": "*",
+    "bower-asset/datatables": "*",
+    "bower-asset/datatables-plugins": "*"
   },
   "require": {
     "php": ">=5.6.0",
@@ -34,7 +36,8 @@
     "mimicreative/yii2-metismenu": "*",
     "mimicreative/yii2-scrollator": "*",
     "rmrevin/yii2-fontawesome": "~2.17",
-    "mervick/yii2-material-design-icons": "^1.0"
+    "mervick/yii2-material-design-icons": "^1.0",
+    "nullref/yii2-datatables ": "~1.0.2"
   },
   "require-dev": {
     "firephp/firephp-core": "dev-master"
