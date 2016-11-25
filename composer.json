@@ -46,7 +46,8 @@
     "asset-installer-paths": {
       "npm-asset-library": "vendor/npm",
       "bower-asset-library": "vendor/bower"
-    }
+    },
+    "bootstrap": "haqqi\\storm\\Bootstrap"
   },
   "autoload": {
     "psr-4": {
