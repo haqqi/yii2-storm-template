@@ -6,6 +6,7 @@ namespace haqqi\storm;
 use yii\base\Application;
 use yii\base\BootstrapInterface;
 use yii\base\Event;
+use yii\console\Controller;
 use yii\web\View;
 
 class Bootstrap implements BootstrapInterface {
