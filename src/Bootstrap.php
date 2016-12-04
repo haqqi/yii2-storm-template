@@ -18,24 +18,24 @@ class Bootstrap implements BootstrapInterface {
        * @var $event Event
        */
 
-      /*
-       * Setup the config of asset bundles
-       */
-      if(!$event->action->controller instanceof Controller) {
-        $bundles =& $event->sender->assetManager->bundles;
+    \Yii::$container->set('yii\web\JqueryAsset', [
+      'js' => ['jquery.min.js'],
+      'jsOptions' => ['position' => View::POS_HEAD]
+    ]);
 
-        $bundles['yii\web\JqueryAsset']['js']        = ['jquery.min.js'];
-        $bundles['yii\web\JqueryAsset']['jsOptions'] = ['position' => View::POS_HEAD];
+    \Yii::$container->set('yii\bootstrap\BootstrapAsset', [
+      'css' => ['css/bootstrap.min.css']
+    ]);
 
-        $bundles['yii\bootstrap\BootstrapAsset']['css'] = ['css/bootstrap.min.css'];
+    \Yii::$container->set('yii\bootstrap\BootstrapPluginAsset', [
+      'js' => ['js/bootstrap.min.js'],
+      'jsOptions' => ['position' => View::POS_HEAD]
+    ]);
 
-        $bundles['yii\bootstrap\BootstrapPluginAsset']['js']        = ['js/bootstrap.min.js'];
-        $bundles['yii\bootstrap\BootstrapPluginAsset']['jsOptions'] = ['position' => View::POS_HEAD];
+    \Yii::$container->set('mimicreative\assets\MetisMenuAsset', [
+      'css' => []
+    ]);
 
-        $bundles['mimicreative\assets\MetisMenuAsset']['css'] = [];
-
-//        \FB::log($event->sender->assetManager->bundles);
-      }
     });
   }
 
