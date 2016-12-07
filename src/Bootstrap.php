@@ -2,6 +2,7 @@
 
 namespace haqqi\storm;
 
+use mimicreative\datatables\assets\DataTableAsset;
 use yii\base\Application;
 use yii\base\BootstrapInterface;
 use yii\base\Event;
@@ -32,6 +33,10 @@ class Bootstrap implements BootstrapInterface {
 
       \Yii::$container->set('mimicreative\assets\MetisMenuAsset', [
         'css' => []
+      ]);
+
+      \Yii::$container->set('mimicreative\datatables\assets\DataTableAsset', [
+        'styling' => DataTableAsset::STYLING_BOOTSTRAP
       ]);
     });
   }
