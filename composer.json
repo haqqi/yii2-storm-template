@@ -37,11 +37,18 @@
     "mimicreative/yii2-scrollator": "*",
     "rmrevin/yii2-fontawesome": "~2.17",
     "mervick/yii2-material-design-icons": "^1.0",
-    "nullref/yii2-datatables": "~1.0"
+    "nullref/yii2-datatables": "~1.0",
+    "mimicreative/yii2-datatables": "@dev"
   },
   "require-dev": {
     "firephp/firephp-core": "dev-master"
   },
+  "repositories": [
+    {
+      "type": "path",
+      "url":  "./../yii2-datatables"
+    }
+  ],
   "extra": {
     "asset-installer-paths": {
       "npm-asset-library": "vendor/npm",
