@@ -1,0 +1,28 @@
+// datatable bootstrap
+
+table.table.dataTable {
+  thead {
+    tr {
+      th {
+        text-align: center;
+      }
+    }
+  }
+  
+  tbody {
+    tr {
+      td {
+        font-size: 13px;
+        line-height: 17px;
+        
+        &.actions-column {
+          text-align: center;
+        }
+        
+        .btn {
+          @include button-size(1px, 5px, 11px, 16px, 0);
+        }
+      }
+    }
+  }
+}

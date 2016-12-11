@@ -501,6 +501,26 @@ p + p {
   padding-left: 67px;
 }
 
+table.table.dataTable thead tr th {
+  text-align: center;
+}
+
+table.table.dataTable tbody tr td {
+  font-size: 13px;
+  line-height: 17px;
+}
+
+table.table.dataTable tbody tr td.actions-column {
+  text-align: center;
+}
+
+table.table.dataTable tbody tr td .btn {
+  padding: 1px 5px;
+  font-size: 11px;
+  line-height: 16px;
+  border-radius: 0;
+}
+
 .sidebar-scroll.scrollator_lane_holder {
   width: 0px;
 }
