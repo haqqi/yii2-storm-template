@@ -548,7 +548,7 @@ table.table.dataTable thead tr th {
 
 table.table.dataTable tbody tr td {
   font-size: 13px;
-  line-height: 17px;
+  line-height: 20px;
 }
 
 table.table.dataTable tbody tr td.actions-column {
@@ -560,6 +560,7 @@ table.table.dataTable tbody tr td .btn {
   font-size: 11px;
   line-height: 16px;
   border-radius: 0;
+  margin-top: -3px;
 }
 
 .sidebar-scroll.scrollator_lane_holder {
