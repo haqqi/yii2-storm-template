@@ -1,4 +1,3 @@
-
 @mixin panel-variant($heading-title-color) {
   border-color: $panel-border-color; // final border color
 
@@ -26,18 +25,46 @@
     background-color: white;
     padding: 20px 0;
     @include border-top-radius(0);
+    @include clearfix();
 
     > .panel-title {
-      font-size: 18px;
-      display: inline;
-      font-weight: 700;
-      font-family: 'Open Sans', sans-serif;
+      display: block;
+      float: left;
+
+      h3 {
+        font-size: 18px;
+        line-height: 24px;
+        display: inline-block;
+        font-weight: 700;
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+      }
+      .description {
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 300;
+        margin-left: 5px;
+        color: #607d8b;
+      }
     }
-    > .panel-description {
-      font-size: 13px;
-      font-weight: 300;
-      margin-left: 5px;
-      color: #607d8b;
+
+    > .panel-tools {
+      display: block;
+      float: right;
+      .btn {
+        @include button-size(2px, 8px, 11px, 18px, 12px);
+      }
+    }
+
+    @media (max-width: $screen-xs-max) {
+      > .panel-title {
+        float: none;
+      }
+
+      > .panel-tools {
+        float: none;
+        margin-top: 10px;
+      }
     }
   }
 
@@ -56,18 +83,23 @@
 .panel-default {
   @include panel-variant($panel-default-text);
 }
+
 .panel-primary {
   @include panel-variant($panel-primary-text);
 }
+
 .panel-success {
   @include panel-variant($panel-success-text);
 }
+
 .panel-info {
   @include panel-variant($panel-info-text);
 }
+
 .panel-warning {
   @include panel-variant($panel-warning-text);
 }
+
 .panel-danger {
   @include panel-variant($panel-danger-text);
 }

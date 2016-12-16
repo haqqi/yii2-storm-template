@@ -3,6 +3,7 @@
 namespace haqqi\storm\widgets;
 
 use yii\base\Widget;
+use yii\bootstrap\Button;
 use yii\helpers\Html;
 
 class Panel extends Widget {
@@ -21,6 +22,11 @@ class Panel extends Widget {
    * @var string Description in the heading
    */
   public $description;
+
+  /**
+   * @var array|string Collection of button for tools or html of tools
+   */
+  public $tools;
 
   /**
    * @var if defined, you can use widget function
@@ -54,34 +60,65 @@ class Panel extends Widget {
    */
   public function run() {
     // render body
-    if($this->body !== null) {
+    if ($this->body !== null) {
       echo $this->body;
     }
     echo Html::endTag('div');
 
 
-    if($this->footer !== null) {
+    if ($this->footer !== null) {
       echo Html::tag('footer', $this->footer, ['class' => 'panel-footer']);
     }
     echo Html::endTag('section');
   }
 
   private function _renderHeading() {
-    if($this->title !== null) {
+    // if just one of it is exists
+    if ($this->title !== null || $this->tools !== null) {
+      // header area
       echo Html::beginTag('header', ['class' => 'panel-heading']);
 
-      echo Html::beginTag('h3', ['class' => 'panel-title']);
-      if($this->icon !== null) {
+      $this->_renderTitle();
+
+      $this->_renderTools();
+
+      echo Html::endTag('header');
+    }
+  }
+
+  private function _renderTitle() {
+    if ($this->title !== null) {
+      echo Html::beginTag('div', ['class' => 'panel-title']);
+
+      echo Html::beginTag('h3');
+      if ($this->icon !== null) {
         echo $this->icon . ' ';
       }
       echo $this->title;
       echo Html::endTag('h3');
 
-      if($this->description !== null) {
-        echo Html::tag('span', $this->description, ['class' => 'panel-description']);
+
+      if ($this->description !== null) {
+        echo Html::tag('span', $this->description, ['class' => 'description']);
       }
 
-      echo Html::endTag('header');
+      echo Html::endTag('div');
+    }
+  }
+
+  private function _renderTools() {
+    if ($this->tools !== null) {
+      echo Html::beginTag('div', ['class' => 'panel-tools']);
+
+      if (is_array($this->tools)) {
+        foreach ($this->tools as $tool) {
+          echo Button::widget($tool);
+        }
+      } else {
+        echo $this->tools;
+      }
+
+      echo Html::endTag('div');
     }
   }
 }

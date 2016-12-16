@@ -77,18 +77,57 @@ body {
   border-top-left-radius: 0;
 }
 
-.panel > .panel-heading > .panel-title {
-  font-size: 18px;
-  display: inline;
-  font-weight: 700;
-  font-family: 'Open Sans', sans-serif;
+.panel > .panel-heading:before, .panel > .panel-heading:after {
+  content: " ";
+  display: table;
 }
 
-.panel > .panel-heading > .panel-description {
+.panel > .panel-heading:after {
+  clear: both;
+}
+
+.panel > .panel-heading > .panel-title {
+  display: block;
+  float: left;
+}
+
+.panel > .panel-heading > .panel-title h3 {
+  font-size: 18px;
+  line-height: 24px;
+  display: inline-block;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+.panel > .panel-heading > .panel-title .description {
+  display: inline-block;
   font-size: 13px;
   font-weight: 300;
   margin-left: 5px;
   color: #607d8b;
+}
+
+.panel > .panel-heading > .panel-tools {
+  display: block;
+  float: right;
+}
+
+.panel > .panel-heading > .panel-tools .btn {
+  padding: 2px 8px;
+  font-size: 11px;
+  line-height: 18px;
+  border-radius: 12px;
+}
+
+@media (max-width: 767px) {
+  .panel > .panel-heading > .panel-title {
+    float: none;
+  }
+  .panel > .panel-heading > .panel-tools {
+    float: none;
+    margin-top: 10px;
+  }
 }
 
 .panel > .panel-body {
